@@ -10,23 +10,23 @@ import org.junit.jupiter.api.Test;
  */
 public class _01_SortedArrayCheckerTest {
 
-    @Test
-    public void intArraySortTest() {
-        int[] unsorted = {3, 2, 9, 3, 1, 0};
-        int[] sorted = {0, 1, 2, 2, 3, 4};
+	@Test
+	public void intArraySortTest() {
+		int[] unsorted = { 3, 2, 9, 3, 1, 0 };
+		int[] sorted = { 0, 1, 2, 2, 3, 4 };
 
-        assertFalse(_01_SortedArrayChecker.intArraySorted(unsorted));
-        assertTrue(_01_SortedArrayChecker.intArraySorted(sorted));
-    }
+		assertFalse(_01_SortedArrayChecker.intArraySorted(unsorted));
+		assertTrue(_01_SortedArrayChecker.intArraySorted(sorted));
+	}
 
-//    @Test
-//    public void doubleArraySortTest() {
-//        double[] unsorted = {3, 2, 9, 3, 1, 0};
-//        double[] sorted = {0, 1, 2, 2, 3, 4};
-//
-//        assertFalse(_01_SortedArrayChecker.doubleArraySorted(unsorted));
-//        assertTrue(_01_SortedArrayChecker.doubleArraySorted(sorted));
-//    }
+	@Test
+	public void doubleArraySortTest() {
+		double[] unsorted = { 3, 2, 9, 3, 1, 0 };
+		double[] sorted = { 0, 1, 2, 2, 3, 4 };
+
+		assertFalse(_01_SortedArrayChecker.doubleArraySorted(unsorted));
+		assertTrue(_01_SortedArrayChecker.doubleArraySorted(sorted));
+	}
 //
 //    @Test
 //    public void charArraySortTest() {
