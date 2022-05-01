@@ -27,22 +27,22 @@ public class _01_SortedArrayCheckerTest {
 		assertFalse(_01_SortedArrayChecker.doubleArraySorted(unsorted));
 		assertTrue(_01_SortedArrayChecker.doubleArraySorted(sorted));
 	}
-//
-//    @Test
-//    public void charArraySortTest() {
-//        char[] unsorted = {'c', 'F', 'p', 'A'};
-//        char[] sorted = {'a', 'b', 'c', 'd', 'e'};
-//
-//        assertFalse(_01_SortedArrayChecker.charArraySorted(unsorted));
-//        assertTrue(_01_SortedArrayChecker.charArraySorted(sorted));
-//    }
-//
-//    @Test
-//    public void stringArraySortTest() {
-//        String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
-//        String[] sorted = {"apple", "banana", "carrot", "grape"};
-//
-//        assertFalse(_01_SortedArrayChecker.stringArraySorted(unsorted));
-//        assertTrue(_01_SortedArrayChecker.stringArraySorted(sorted));
-//    }
+
+    @Test
+    public void charArraySortTest() {
+        char[] unsorted = {'c', 'F', 'p', 'A'};
+        char[] sorted = {'a', 'b', 'c', 'd', 'e'};
+
+        assertFalse(_01_SortedArrayChecker.charArraySorted(unsorted));
+        assertTrue(_01_SortedArrayChecker.charArraySorted(sorted));
+   }
+
+    @Test
+    public void stringArraySortTest() {
+        String[] unsorted = {"carrot", "pineapple", "mango", "pear"};
+        String[] sorted = {"apple", "banana", "carrot", "grape"};
+
+        assertFalse(_01_SortedArrayChecker.stringArraySorted(unsorted));
+        assertTrue(_01_SortedArrayChecker.stringArraySorted(sorted));
+    }
 }

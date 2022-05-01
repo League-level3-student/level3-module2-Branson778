@@ -1,5 +1,7 @@
 package _00_Intro_to_Sorting_Algorithms;
 
+import java.util.Iterator;
+
 public class _01_SortedArrayChecker {
     /*
      * Write a static method called intArraySorted.
@@ -10,7 +12,7 @@ public class _01_SortedArrayChecker {
      */
     public static boolean intArraySorted(int[] arr) {
      //  Integer[] tester1 = new Integer[arr.length];
-    	for (int i = 0; i < arr.length; i++) {
+    	
 			for (int j = 0; j < arr.length - 1; j++) {
 				if(arr[j] > arr[j+1]) {
 					return false;
@@ -19,7 +21,7 @@ public class _01_SortedArrayChecker {
 					//arr[j+1] = keep;
 				}
 			}
-		}
+		
         return true;
     }
 
@@ -31,13 +33,13 @@ public class _01_SortedArrayChecker {
      * and false otherwise.
      */
     public static boolean doubleArraySorted(double[] arr2) {
-		for (int i = 0; i < arr2.length; i++) {
+		
 			for (int j = 0; j < arr2.length -1; j++) {
 				if(arr2[j] > arr2[j+1]) {
 					return false;
 				}
 			}
-		}
+		
     	return true;
     	
     }
@@ -50,7 +52,16 @@ public class _01_SortedArrayChecker {
      * order and false otherwise (You can compare characters just like
      * integers).
      */
-
+     public static boolean charArraySorted(char[] arr3) {
+    	 
+			for (int j = 0; j < arr3.length -1; j++) {
+				if(arr3[j] > arr3[j+1]) {
+					return false;
+				}
+			}
+		
+    	 return true;
+     }
 
     /*
      * 4. Write a static method called stringArraySorted.
@@ -59,5 +70,14 @@ public class _01_SortedArrayChecker {
      *  The method returns true if the String array is in alphabetical
      *  order and false otherwise (Use the compareTo(String) method).
      */
-
+     public static boolean stringArraySorted(String[] arr4) {
+    	 
+			for (int j = 0; j < arr4.length -1; j++) {
+				if(arr4[j].compareTo(arr4[j+1])>=0) {
+					return false;
+				}
+			}
+		
+    	 return true;
+     }
 }
