@@ -1,5 +1,7 @@
 package _01_Sorting_Algorithms;
 
+import java.util.Random;
+
 public class ThanosSorter extends Sorter {
     public ThanosSorter() {
         type = "Thanos";
@@ -45,6 +47,39 @@ public class ThanosSorter extends Sorter {
      */
     @Override
     void sort(int[] arr, SortingVisualizer display) {
-        
+       boolean balanced = false;
+       int start = 0;
+       int end = arr.length;
+       while(balanced == false) {
+    	balanced = true;
+    	   for (int i = start; i < end-1; i++) {
+				boolean frontHalf = new Random().nextBoolean();
+				int half = ((end-start)/2) +start;
+				if(frontHalf) {
+					snap(arr,start,half);
+					start = half;
+				}
+				else {
+					snap(arr,half,end);
+				    end = half;
+				}
+				balanced = false;
+				display.updateDisplay();
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+		}
+    }
+    }
+    public static void snap(int[] array,int start, int end) {
+    	if(array.length!=1) {
+    		for (int i = start; i < end; i++) {
+				array[i]=0;
+			}
+    	}
     }
 }
