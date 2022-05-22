@@ -24,6 +24,6 @@ class _03_SearchTest {
         //    remember that the array must be sorted
     	int[] l = {2,4,5,7,9,12,16,24};
     	int v = 12;
-        assertEquals(false, _02_BinarySearch.binarySearch(l, 0, l.length-1, v));
+        assertEquals(5, _02_BinarySearch.binarySearch(l, 0, l.length-1, v));
     }
 }
