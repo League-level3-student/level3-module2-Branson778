@@ -106,4 +106,30 @@ public class Algorithms {
 		}
 		return results;
 	}
+
+	public static Object sortDNA(List<String> unsortedSequences) {
+		for (int i = 0; i < unsortedSequences.size(); i++) {
+			for (int j = 0; j < unsortedSequences.size()-1; j++) {
+				if(unsortedSequences.get(j).length()>unsortedSequences.get(j+1).length()) {
+					String temp = unsortedSequences.get(j);
+					unsortedSequences.set(j, unsortedSequences.get(j+1));
+					unsortedSequences.set(j+1, temp);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		for (int i = 0; i < words.size(); i++) {
+			for (int j = 0; j < words.size()-1; j++) {
+			if(words.get(j).compareTo(words.get(j+1))==1) {
+				String temp = words.get(j);
+				words.set(j,words.get(j+1));
+				words.set(j+1, temp);
+			}
+			}
+		}
+		return words;
+	}
 }
